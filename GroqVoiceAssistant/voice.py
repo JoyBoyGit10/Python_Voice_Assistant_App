@@ -303,7 +303,7 @@ with st.sidebar:
 if not st.session_state.auto_mode or not st.session_state.running:
     user_input = st.text_input("Type your message:", key="manual_input")
     if st.button("Send", key="send_btn") and user_input:
-        with st.spinner("🛞 rocessing..."):
+        with st.spinner("🛞 processing..."):
             response = get_groq_response(user_input)
             st.session_state.conversation.append(("You", user_input))
             st.session_state.conversation.append(("Assistant", response))
